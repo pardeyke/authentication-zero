@@ -28,7 +28,7 @@ class TwoFactorAuthentication::Profile::SecurityKeysController < ApplicationCont
 
   def destroy
     @security_key.destroy
-    redirect_to two_factor_authentication_profile_security_keys_path, notice: "#{@security_key.name} has been removed", status: :see_other
+    redirect_to two_factor_authentication_profile_security_keys_path, status: :see_other, notice: "#{@security_key.name} has been removed"
   end
 
   private
