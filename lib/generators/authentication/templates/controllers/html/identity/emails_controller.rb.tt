@@ -6,7 +6,7 @@ class Identity::EmailsController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to_root
+      redirect_to_root, status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end

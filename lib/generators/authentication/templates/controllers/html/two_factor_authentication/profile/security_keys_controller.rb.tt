@@ -23,7 +23,7 @@ class TwoFactorAuthentication::Profile::SecurityKeysController < ApplicationCont
 
   def update
     @security_key.update! name: params[:name]
-    redirect_to two_factor_authentication_profile_security_keys_path, notice: "Your changes have been saved"
+    redirect_to two_factor_authentication_profile_security_keys_path, status: :see_other, notice: "Your changes have been saved"
   end
 
   def destroy
